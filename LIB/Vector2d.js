@@ -12,4 +12,6 @@ class Vector2d{
       this.dx = a.dx - b.dx;
       this.dy = a.dy - b.dy;
     }
+
+
 }

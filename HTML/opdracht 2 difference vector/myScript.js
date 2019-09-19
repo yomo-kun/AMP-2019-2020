@@ -7,4 +7,13 @@ const height = window.innerHeight;
 canvas.width = width;
 canvas.height = height;
 
-let myPoint = new Point(new Vector2d(200, 300))
+let myPoint = new Point(new Vector2d(200,300),100);
+``
+
+myPoint.draw(context);
+
+window.addEvenListener('click',(evt)=>{
+  console.log('ik heb geKLIEKT');
+})
+
+animate();
