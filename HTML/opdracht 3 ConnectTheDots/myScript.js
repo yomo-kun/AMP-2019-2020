@@ -9,7 +9,7 @@ canvas.height = height;
 
 let Dots = [];
 let DotColor = ['#ffb3ff','#9933ff','#ffcce6','#9966ff'];
-let MaxDots = 4;
+let MaxDots = 7;
 
 function Start(){
   for(let i = 0;i < MaxDots; i++){
@@ -59,11 +59,10 @@ function RandomColour(){
 
 
 function addDots(){
+
   let Dotz = new Point(new Vector2d(getRandomNumber(canvas.width),getRandomNumber(canvas.height)),20, "#8D6BBF");
   Dots.push(Dotz);
   console.log('they have been pushed');
-
-
 }
 
 function getRandomNumber(max){

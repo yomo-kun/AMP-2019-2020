@@ -14,6 +14,28 @@ class Point {
     context.fill();
     context.closePath();
   }
+
+  click(){
+      let mousePos = {};
+        let dragStatus = false;
+
+
+            document.addEventListener('mousedown', (evt)=>{
+              mousePos.x = evt.clientX;
+              mousePos.y = evt.clientY;
+              console.log(mousePos);
+
+              if(this.distanceToAnOtherPoint(mousePos) <= this.radius){
+                this.color = "#FCCAC5";
+                console.log('kleur anders')
+              } else{
+
+                console.log('mis')
+              }
+            })
+
+  }
+
   drag(){
     let dragStatus = false;
     let mousePos = {};
@@ -59,5 +81,7 @@ class Point {
     let dy = this.position.dy - P.y;
     return Math.sqrt(dx*dx + dy*dy);
   }
+
+
 
 }

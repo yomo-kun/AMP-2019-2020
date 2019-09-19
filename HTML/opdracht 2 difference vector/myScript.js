@@ -7,13 +7,34 @@ const height = window.innerHeight;
 canvas.width = width;
 canvas.height = height;
 
-let myPoint = new Point(new Vector2d(200,300),100);
-``
+let myArray = [];
 
-myPoint.draw(context);
+let maxBalls = 9;
 
-window.addEvenListener('click',(evt)=>{
-  console.log('ik heb geKLIEKT');
-})
+
+
+ballsInArray();
+function animate(){
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  requestAnimationFrame(animate);
+
+myArray[0].draw(context);
+  for(let i = 0; i < myArray.length; i ++){
+    myArray[i].draw(context);
+
+  }
+}
+
+function ballsInArray(){
+  for(let i = 0; i < maxBalls; i++){
+  let myPoint = new Point(new Vector2d(getRandomNumber(canvas.width),getRandomNumber(canvas.height)),20, "#CDDAD1");
+  myPoint.click();
+  myArray.push(myPoint);
+  }
+}
+
+function getRandomNumber(max){
+  return Math.floor(Math.random()*max);
+}
 
 animate();
