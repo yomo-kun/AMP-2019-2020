@@ -23,14 +23,8 @@ class Point {
             document.addEventListener('mousedown', (evt)=>{
               mousePos.x = evt.clientX;
               mousePos.y = evt.clientY;
-              console.log(mousePos);
-
               if(this.distanceToAnOtherPoint(mousePos) <= this.radius){
                 this.color = "#FCCAC5";
-                console.log('kleur anders')
-              } else{
-
-                console.log('mis')
               }
             })
 
@@ -43,14 +37,11 @@ class Point {
     document.addEventListener('mousedown', (evt)=>{
       mousePos.x = evt.clientX;
       mousePos.y = evt.clientY;
-      console.log(mousePos);
 
       if(this.distanceToAnOtherPoint(mousePos) <= this.radius){
         dragStatus = true;
-        console.log('raak')
       } else{
         dragStatus = false;
-        console.log('mis')
       }
     })
 

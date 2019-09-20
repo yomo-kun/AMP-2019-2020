@@ -3,4 +3,22 @@ body{
   background-color: #EBCEF5;
   padding: 0;
   margin: 0;
+  background-image: url(img/background.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+
+}
+
+#Html{
+  background-color: rgba(251, 205, 215, 0.8 );
+  position: fixed;
+  width: 600px;
+  height: 300px;
+  left: 470px;
+  border-style: groove;
+  border-color: white;
+
 }

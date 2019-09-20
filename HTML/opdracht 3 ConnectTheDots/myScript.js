@@ -23,7 +23,7 @@ function animate(){
   context.clearRect(0, 0, canvas.width, canvas.height);
   requestAnimationFrame(animate);
 
-if(Math.random() < 0.01){
+if(Math.random() < 0.05 ){
   Dots.splice(0,1);
   addDots();
 }
