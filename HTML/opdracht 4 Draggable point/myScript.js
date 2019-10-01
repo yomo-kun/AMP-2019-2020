@@ -20,6 +20,7 @@ function animate(){
   context.clearRect(0, 0, canvas.width, canvas.height);
   requestAnimationFrame(animate);
   context.beginPath();
+  context.setLineDash([]);
   context.fillStyle = "rgba(175, 112, 204, 05)";
   context.moveTo(point1.position.dx,point1.position.dy);
   context.lineTo(point2.position.dx,point2.position.dy);

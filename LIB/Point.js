@@ -25,6 +25,7 @@ class Point {
               mousePos.y = evt.clientY;
               if(this.distanceToAnOtherPoint(mousePos) <= this.radius){
                 this.color = "#FCCAC5";
+                clickedBalls += 1;
               }
             })
 
@@ -53,7 +54,7 @@ class Point {
         canvas.style.cursor = "grab";
         event.stopImmediatePropagation();
       } else{
-        canvas.style.cursor = "default";
+        canvas.style.cursor = "not-allowed";
       }
 
       if(dragStatus){

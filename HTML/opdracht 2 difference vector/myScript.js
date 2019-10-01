@@ -7,17 +7,23 @@ const height = window.innerHeight;
 canvas.width = width;
 canvas.height = height;
 
+let clickedBalls = 0;
+
 let myArray = [];
 
-let maxBalls = 9;
-
+let maxBalls = 10;
 
 
 ballsInArray();
 function animate(){
   context.clearRect(0, 0, canvas.width, canvas.height);
   requestAnimationFrame(animate);
+  if(clickedBalls == maxBalls){
+    myArray.splice(0,10);
+    ballsInArray();
+    clickedBalls = 0;
 
+}
 myArray[0].draw(context);
   for(let i = 0; i < myArray.length; i ++){
     myArray[i].draw(context);

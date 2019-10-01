@@ -1,0 +1,81 @@
+body{
+  overflow: hidden;
+  background-color: #EBCEF5;
+  padding: 0;
+  margin: 0;
+  background-image: url(../img/background.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: cono;
+}
+
+#links{
+  position: absolute;
+  left: 1300px;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(221, 193, 207, 0.5);
+  border-style: dotted;
+  border-color: white;
+  justify-content: center;
+}
+
+
+ul{
+  list-style-type: none;
+  list-style-image: url('../img/bullet2.gif');
+  font-family:Lucida Sans Typewriter;
+}
+
+#arrow{
+  position: fixed;
+  top: 165px;
+  left: 500px;
+}
+
+#c{
+  position:absolute;
+  top:0; left:0;
+  opacity: 0.17;
+}
+
+#bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+#SheepndText{
+  position: absolute;
+  left: 560px;
+}
+
+#firstText{
+  color: white;
+  font-size: 400%;
+  position: absolute;
+  left: 120px;
+  top: 30px;
+
+}
+
+@font-face{
+  font-family: cono;
+  src: url(myFont.ttf);
+}
+
+
+#Html{
+  background-color: rgba(251, 205, 215, 0.8 );
+  position: fixed;
+  width: 600px;
+  height: 300px;
+  left: 470px;
+  border-style: dotted;
+  border-color: white;
+
+}

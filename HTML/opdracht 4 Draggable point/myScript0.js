@@ -6,10 +6,10 @@ const height = window.innerHeight;
 
 canvas.width = width;
 canvas.height = height;
-
+var now = 1;
 let Dots = [];
 let DotColor = ['#ffb3ff','#9933ff','#ffcce6','#9966ff'];
-let MaxDots = 6;
+let MaxDots = 10;
 
 function Start(){
   for(let i = 0;i < MaxDots; i++){
@@ -19,16 +19,26 @@ function Start(){
 
 Start();
 animate();
+
+
+
+  setTimeout(function () {
+    for(let i = 0; i < 10; i++){
+    Counter.innerHTML = now += i;
+  }
+   }, 3000);
+
+
+
 function animate(){
   context.clearRect(0, 0, canvas.width, canvas.height);
   requestAnimationFrame(animate);
 
-if(Math.random() < 0.02 ){
-  Dots.splice(0,1);
-  addDots();
-}
+
+
   for(let i = 0; i < Dots.length; i++){
     Dots[i].draw(context);
+    Dots[i].drag();
 
   }
 context.beginPath();

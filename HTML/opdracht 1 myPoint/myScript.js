@@ -25,11 +25,11 @@ function animate(){
 
   for(let i = 0; i < 400; i++){
     DotzArray[i].draw(context);
-    Dotz.radius += 0.5;
+
 
   }
-  if(Dotz.radius > 50){
-    DotzArray.splice(i,1);
+  if(Math.random() < 1 ){
+    DotzArray.splice(0,1);
   }
 
 
