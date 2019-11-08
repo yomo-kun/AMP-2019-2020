@@ -1,8 +1,9 @@
 class Point {
-  constructor(position,radius,color){
+  constructor(position,radius,color,label){
     this.position = position;
     this.radius = radius;
     this.color = color;
+    this.label = label || "";
   }
 
   draw(context){
@@ -13,6 +14,8 @@ class Point {
     context.stroke();
     context.fill();
     context.closePath();
+    context.font = "12px Arial";
+    context.fillText(this.label, this.position.dx-20, this.position.dy-this.radius-10);
   }
 
   click(){
@@ -41,6 +44,7 @@ class Point {
 
       if(this.distanceToAnOtherPoint(mousePos) <= this.radius){
         dragStatus = true;
+
       } else{
         dragStatus = false;
       }
@@ -49,6 +53,7 @@ class Point {
     document.addEventListener('mousemove', (evt)=>{
       mousePos.x = evt.clientX;
       mousePos.y = evt.clientY;
+
 
       if(this.distanceToAnOtherPoint(mousePos) <= this.radius){
         canvas.style.cursor = "grab";
